@@ -58,14 +58,28 @@ class TagifyClass {
     const selectedValueArray = this.#tagify.value.map((item) => item.value);
     console.log(selectedValueArray);
   }
+  /**
+   *
+   * @returns {[]}
+   */
+  getKeyValuesPairList() {
+    return this.#tagify.value.map((item) => ({
+      id: item.id,
+      value: item.value,
+    }));
+  }
+
+  setPairListData() {
+    this.#tagify.addTags([1, 2, 34]);
+  }
 }
 
 const tag = new TagifyClass(
   "tags-outside",
   [
-    { id: 1, name: "akshay", lastName: "mahajan" },
-    { id: 2, name: "mayur", lastName: "patil" },
-    { id: 3, name: "shubham", lastName: "mahajan" },
+    { id: 1, name: "a", lastName: "m" },
+    { id: 2, name: "d", lastName: "p" },
+    { id: 3, name: "s", lastName: "n" },
   ],
   "id",
   "name"
