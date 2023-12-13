@@ -69,8 +69,12 @@ class TagifyClass {
     }));
   }
 
-  setPairListData() {
-    this.#tagify.addTags([1, 2, 34]);
+  /**
+   *
+   * @param {[]} tagList
+   */
+  addTagsList(tagList) {
+    this.#tagify.addTags(tagList);
   }
 }
 
