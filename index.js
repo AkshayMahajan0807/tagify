@@ -8,6 +8,9 @@ class TagifyClass {
    * @param {[]} dropdownList
    * @param {string} keyID
    * @param {string} keyValue
+   * @description keyID and keyValue it is purpose for to generate
+   * key value pair format as per tagify mean like [{id:"",value:""}]
+   *
    */
   constructor(tagifyID, dropdownList = [], keyID, keyValue) {
     this.#keyID = keyID;
@@ -39,13 +42,18 @@ class TagifyClass {
   getTagify() {
     return this.#tagify;
   }
+
+  /**
+   * @description get to the id list
+   */
   getID() {
-    /**
-     * @type{[{}]}
-     */
     const selectedIDArray = this.#tagify.value.map((item) => item.id);
     console.log(selectedIDArray);
   }
+
+  /**
+   * @description get to the values list
+   */
   getValues() {
     const selectedValueArray = this.#tagify.value.map((item) => item.value);
     console.log(selectedValueArray);
